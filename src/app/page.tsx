@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <main className="app transition-all ease-in">
       <Main></Main>
-      <CanvasModel />
-      <Costum></Costum>
+     
+     
     </main>
   );
 }

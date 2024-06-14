@@ -91,6 +91,7 @@ const Costum = () =>{
 
      if (!activeFilterTab[decalType.filterTab]) {
        handleActiveFilterTab(decalType.filterTab);
+       setActiveEditorTab("");
      }
    };
 
@@ -98,9 +99,11 @@ const Costum = () =>{
      switch (tabName) {
        case "logoShirt":
          state.isLogoTexture = !activeFilterTab[tabName];
+         setActiveEditorTab("");
          break;
        case "stylishShirt":
          state.isFullTexture = !activeFilterTab[tabName];
+         setActiveEditorTab("");
          break;
        default:
          state.isLogoTexture = true;
