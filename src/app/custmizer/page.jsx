@@ -1,5 +1,5 @@
 'use client'
-import { useState,useEffect } from "react"
+import { useState,useEffect,useRef } from "react"
 import { AnimatePresence,motion } from "framer-motion"
 import { useSnapshot } from "valtio"
 import config from '../config/config'
@@ -10,16 +10,18 @@ import { fadeAnimation,slideAnimation } from "../config/motion"
 import  AIpeaker  from "../components/AIpeaker";
 import Colorpeaker from "../components/Colorpiker"
 import CustomButton from "../components/CustonButon";
-import Filepeaker from "../components/Filepicker"
+import Filepeaker from "../components/Filepicker" 
 import Tab from "../components/Tab"
 import Link from "next/link"
 import CanvasModel from "../Canvas/page"
+
  
 
 
 const Costum = () =>{
   const [isIntroOpen, setIsIntroOpen] = useState(false); // Initial state: false
    const snap = useSnapshot(state);
+  
 
    const [file, setFile] = useState("");
 
