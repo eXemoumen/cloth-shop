@@ -14,6 +14,8 @@ import CustomButton from "../components/CustonButon";
 import Link from "next/link";
 import CanvasModel from "../Canvas/page";
 import { Card } from "@/components/card";
+import { Button } from "@/components/ui/button";
+// import { Shopping } from "@/components/shopcards";
 
 const Main = () => {
   const snap = useSnapshot(state);
@@ -50,6 +52,11 @@ const Main = () => {
                     customStyles="w-fit px-4 py-2.5 font-bold text-small"
                   />
                 </Link>
+                <Link href={''}> 
+                  <Button size="lg" className="mt-6">
+                    Shop Now
+                  </Button>
+                </Link>
               </motion.div>
             </motion.div>
           </motion.section>
@@ -60,10 +67,15 @@ const Main = () => {
         >
           <CanvasModel />
         </motion.div>
-      </div>
-      <div className="h-full">
-        <motion.section {...CanvasModel}>
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{amount:'all'}}>
+      </div>{" "}
+      <div className="">
+        <motion.section {...slideAnimation}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+          >
             <Card />
           </motion.div>
         </motion.section>
