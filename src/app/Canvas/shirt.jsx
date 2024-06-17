@@ -36,7 +36,7 @@ const Shirt = () => {
             map={fullTexture}
           />
         )}
-
+        {/* make the scale custom with selct scale */}
         {snap.isLogoTexture && (
           <Decal
             position={[0, 0.04, 0.15]}
