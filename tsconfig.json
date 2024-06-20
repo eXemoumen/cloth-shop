@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/custmizer/page.jsx", "src/app/Canvas/shirt.jsx", "src/app/Canvas/page.jsx", "src/app/Canvas/cameraRing.jsx", "src/app/Canvas/BackDrop.jsx", "src/app/components/Tab.jsx", "src/app/components/Colorpiker.jsx", "src/app/components/Filepicker.jsx", "src/app/components/AIpeaker.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/custmizer/page.jsx", "src/app/Canvas/shirt.jsx", "src/app/Canvas/page.jsx", "src/app/Canvas/cameraRing.jsx", "src/app/Canvas/BackDrop.jsx", "src/app/components/Tab.jsx", "src/app/components/Colorpiker.jsx", "src/app/components/Filepicker.jsx", "src/app/components/AIpeaker.jsx", "src/components/dashbor.jsx"],
   "exclude": ["node_modules"]
 }

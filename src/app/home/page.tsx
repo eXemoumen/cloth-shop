@@ -52,9 +52,14 @@ const Main = () => {
                     customStyles="w-fit px-4 py-2.5 font-bold text-small"
                   />
                 </Link>
-                <Link href={''}> 
+                <Link href={""}>
                   <Button size="lg" className="mt-6">
                     Shop Now
+                  </Button>
+                </Link>
+                <Link href={"/admin"}>
+                  <Button size="lg" className="mt-6">
+                   add prodcut
                   </Button>
                 </Link>
               </motion.div>

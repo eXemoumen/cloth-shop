@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
@@ -37,7 +38,7 @@ export default function Shopping() {
       name: "Graphic Tee",
       description: "A stylish t-shirt with a bold graphic design",
       price: 29.99,
-      image: "/vercel.svg",
+      image: "/t-shirt.png",
       size: ["S", "M", "L", "XL", "XXL"],
       color: ["navy", "olive", "burgundy"],
     },
@@ -46,7 +47,7 @@ export default function Shopping() {
       name: "Vintage Tee",
       description: "A retro-inspired t-shirt with a worn-in look",
       price: 22.99,
-      image: "/vercel.svg",
+      image: "/t-shirt.png",
       size: ["M", "L", "XL"],
       color: ["heather", "mustard", "charcoal"],
     },
@@ -55,7 +56,7 @@ export default function Shopping() {
       name: "Organic Tee",
       description: "A sustainable and eco-friendly t-shirt",
       price: 27.99,
-      image: "/vercel.svg",
+      image: "/t-shirt.png",
       size: ["S", "M", "L", "XL", "XXL"],
       color: ["natural", "sage", "indigo"],
     },
@@ -64,7 +65,7 @@ export default function Shopping() {
       name: "Striped Tee",
       description: "A classic striped t-shirt with a modern twist",
       price: 25.99,
-      image: "/vercel.svg",
+      image: "/t-shirt.png",
       size: ["S", "M", "L", "XL"],
       color: ["navy", "red", "black"],
     },
@@ -73,7 +74,7 @@ export default function Shopping() {
       name: "Pocket Tee",
       description: "A simple t-shirt with a functional pocket",
       price: 19.99,
-      image: "/vercel.svg",
+      image: "/t-shirt.png",
       size: ["S", "M", "L", "XL"],
       color: ["heather", "olive", "white"],
     },
@@ -92,8 +93,7 @@ export default function Shopping() {
         product.price <= filters.priceRange[1];
       return inSizeRange && inColorRange && inPriceRange;
     });
-  }, [filters]);
-
+}, [filters]);
   const handleAddToCart = (product) => {
     setCart([...cart, product]);
   };
@@ -151,7 +151,7 @@ export default function Shopping() {
                             className="flex items-center justify-between"
                           >
                             <div className="flex items-center gap-4">
-                              <img
+                              <Image
                                 src={item.image}
                                 alt={item.name}
                                 width={64}
@@ -279,7 +279,7 @@ export default function Shopping() {
                   key={product.id}
                   className="rounded-lg shadow-lg overflow-hidden"
                 >
-                  <img
+                  <Image
                     src={product.image}
                     alt={product.name}
                     width={400}
